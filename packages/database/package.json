@@ -1,5 +1,11 @@
 {
   "name": "@workspace/database",
   "version": "1.0.0",
-  "main": "index.ts"
+  "main": "index.ts",
+  "devDependencies": {
+    "prisma": "^6.19.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3"
+  }
 }
