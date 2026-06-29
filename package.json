@@ -1,10 +1,16 @@
 {
   "name": "notes",
   "version": "1.0.0",
+  "private": true,
   "description": "",
+  "packageManager": "pnpm@11.9.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -12,12 +18,28 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "^11.9.0",
+      "version": "11.9.0",
       "onFail": "download"
     }
   },
   "type": "module",
   "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.0",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "turbo": "^2.10.0"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx,jsx}": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write --ignore-unknown"
+    ]
   }
 }

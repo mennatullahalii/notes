@@ -2,8 +2,17 @@
   "name": "@workspace/api",
   "version": "1.0.0",
   "main": "index.ts",
+  "scripts": {
+    "lint": "eslint \"**/*.{js,mjs,cjs,jsx,ts,tsx}\" --max-warnings=0 --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint \"**/*.{js,mjs,cjs,jsx,ts,tsx}\" --fix --no-error-on-unmatched-pattern",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "dependencies": {
     "@workspace/shared-types": "workspace:*",
     "@workspace/database": "workspace:*"
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*"
   }
 }
