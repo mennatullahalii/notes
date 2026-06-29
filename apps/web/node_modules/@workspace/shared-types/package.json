@@ -1,14 +1,21 @@
 {
   "name": "@workspace/shared-types",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
     "lint": "eslint \"**/*.{js,mjs,cjs,jsx,ts,tsx}\" --max-warnings=0 --no-error-on-unmatched-pattern",
     "lint:fix": "eslint \"**/*.{js,mjs,cjs,jsx,ts,tsx}\" --fix --no-error-on-unmatched-pattern",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@workspace/eslint-config": "workspace:*"
+    "@workspace/eslint-config": "workspace:*",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
   }
 }

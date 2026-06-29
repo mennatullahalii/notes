@@ -10,7 +10,10 @@
     "lint:fix": "turbo lint:fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "clean": "turbo run clean"
   },
   "keywords": [],
   "author": "",

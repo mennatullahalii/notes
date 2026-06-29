@@ -296,10 +296,17 @@ importers:
         version: 8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
 
   packages/shared-types:
+    dependencies:
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
     devDependencies:
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
 
 packages:
 
