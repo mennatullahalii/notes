@@ -32,14 +32,5 @@
     "prettier": "^3.9.0",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "turbo": "^2.10.0"
-  },
-  "lint-staged": {
-    "*.{js,mjs,cjs,ts,tsx,jsx}": [
-      "eslint --fix --max-warnings=0",
-      "prettier --write --ignore-unknown"
-    ],
-    "*.{json,md,yml,yaml}": [
-      "prettier --write --ignore-unknown"
-    ]
   }
 }
